@@ -1,4 +1,4 @@
-export default function History() {
+export function History() {
   return (
     <div>History</div>
   );
