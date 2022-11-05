@@ -40,6 +40,14 @@
           "some": ["nesting","id"]
         }
       }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": {
+          "attributes": false
+        }
+      }
     ]
   }
 }
