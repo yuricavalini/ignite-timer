@@ -48,6 +48,15 @@
           "attributes": false
         }
       }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "draft"
+        ]
+      }
     ]
   }
 }
