@@ -1,32 +1,18 @@
 import { produce } from 'immer';
 
+import { Cycle } from '../models/cycle';
 import { ActionTypes } from '../constants/cyclesConstants';
+import { ActionsProp } from '../actions/cyclesActions';
 
-export interface Cycle {
-  id: string;
-  task: string;
-  minutesAmount: number;
-  startDate: Date;
-  interruptedDate?: Date;
-  finishedDate?: Date;
-}
-
-interface CyclesState {
+export interface CyclesState {
   cycles: Cycle[];
   activeCycleId: string | null;
 }
 
-type Actions =
-  | {
-    type: ActionTypes.ADD_NEW_CYCLE;
-    payload: {
-      newCycle: Cycle
-    };
-  }
-  | { type: ActionTypes.INTERRUPT_CURRENT_CYCLE }
-  | { type: ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED };
-
-export function cyclesReducer(state: CyclesState, action: Actions): CyclesState {
+export function cyclesReducer(
+  state: CyclesState,
+  action: ActionsProp,
+): CyclesState {
   switch (action.type) {
     case ActionTypes.ADD_NEW_CYCLE:
       return produce(state, (draft) => {
