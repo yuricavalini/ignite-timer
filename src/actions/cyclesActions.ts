@@ -1,5 +1,5 @@
-import { ActionTypes } from '../constants/cyclesConstants';
 import { Cycle } from '../models/cycle';
+import { ActionTypes } from '../constants/cyclesConstants';
 
 interface AddNewCycleActionProps {
   type: ActionTypes.ADD_NEW_CYCLE

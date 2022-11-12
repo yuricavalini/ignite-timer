@@ -1,13 +1,12 @@
-import { differenceInSeconds } from 'date-fns';
 import {
   createContext, ReactNode, useEffect, useReducer, useState,
 } from 'react';
+import { differenceInSeconds } from 'date-fns';
 
+import { Cycle } from '../models/cycle';
 import {
   addNewCycleAction, interruptCurrentCycleAction, markCurrentCycleAsFinishedAction,
 } from '../actions/cyclesActions';
-import { Cycle } from '../models/cycle';
-
 import { cyclesReducer, CyclesState } from '../reducers/cyclesReducer';
 
 interface CreateCycleData {

@@ -1,8 +1,11 @@
 import { useContext } from 'react';
+// https: //github.com/import-js/eslint-plugin-import/issues/1479
+/* eslint-disable import/no-duplicates */
 import { formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
+/* eslint-disable import/no-duplicates */
 
-import { CyclesContext } from '../../contexts/CyclesContext';
+import { CyclesContext } from '@/contexts/CyclesContext';
 
 import { HistoryContainer, HistoryList, Status } from './styles';
 
