@@ -16,6 +16,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
       - name: Checkout - Clone repository
         uses: actions/checkout@v3
 
@@ -27,13 +31,15 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
 
       - name: Setup dependencies
-      - run: npm ci
+        run: npm ci
 
       - name: Setup build
-      - run: npm run build
+        run: npm run build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."
