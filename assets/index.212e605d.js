@@ -288,7 +288,7 @@ Error generating stack: `+o.message+`
 
   display: flex;
   flex-direction: column;
-`;function qk(){return ae(Jk,{children:[x(Gk,{}),x(Fg,{})]})}function e2(){return x(Hg,{children:ae(Fs,{path:"/",element:x(qk,{}),children:[x(Fs,{path:"/",element:x(lk,{})}),x(Fs,{path:"/history",element:x(Yk,{})})]})})}const t2=ig`
+`;function qk(){return ae(Jk,{children:[x(Gk,{}),x(Fg,{})]})}function e2(){return x(Hg,{basename:"/ignite-timer",children:ae(Fs,{path:"/",element:x(qk,{}),children:[x(Fs,{path:"/",element:x(lk,{})}),x(Fs,{path:"/history",element:x(Yk,{})})]})})}const t2=ig`
   * {
     margin: 0;
     padding: 0;
